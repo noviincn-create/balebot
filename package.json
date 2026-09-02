@@ -1,0 +1,24 @@
+{
+  "name": "balebot",
+  "version": "1.0.0",
+  "description": "HubSpot Contact Creation with Identity Verification",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "npm run build:worker",
+    "build:worker": "esbuild src/worker/index.js --bundle --outfile=dist/worker.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "@cloudflare/wrangler": "^3.0.0",
+    "esbuild": "^0.19.0",
+    "jest": "^29.0.0"
+  }
+}
